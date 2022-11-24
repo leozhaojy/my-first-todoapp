@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TodoApp - Django</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/jquery-3.5.1.min.js' %}"
+    ></script>
+    <!-- Popper -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/popper.min.js' %}"
+    ></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/bootstrap.bundle.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/bootstrap.bundle.min.js' %}"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+      <a class="navbar-brand">ToDo</a>
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </nav>
+    <div>{% block content %} {% endblock content %}</div>
+  </body>
+</html>
